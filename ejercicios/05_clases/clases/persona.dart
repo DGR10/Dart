@@ -1,9 +1,9 @@
 class Persona {
 
-  // Campos o propiedades
+  // Campos o propiedades -> Por defecto todas las propiedades son públicas, para hacerlas privadas ponemos _
   String nombre;
   int edad;
-  String bio;
+  String _bio;
 
   // Get y sets
 
@@ -11,7 +11,7 @@ class Persona {
 
   // Métodos
   @override
-  String toString() => '$nombre $edad $bio';
+  String toString() => '$nombre $edad $_bio';
   
 
 
