@@ -13,6 +13,8 @@ main() {
 
   // print(persona.toString());
   print(persona);
+  persona.bio = 'Cambié el valor';
+  print(persona.bio);
 
 }
 
