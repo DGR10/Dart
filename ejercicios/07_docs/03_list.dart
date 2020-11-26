@@ -1,7 +1,4 @@
 
-
-import 'dart:_internal';
-
 main(List<String> args) {
   List<int> lista = [1,2,3,4,5];
   List<int> lista2 = [3,1,2,15,-10];
@@ -37,6 +34,16 @@ main(List<String> args) {
   print('Remove result: ${lista3}');
 
   print('Shuffle: $lista.shuffle()'); // Recoloca la lista aleatoriamente
-  print('Sort: ${lista3.sort()}');
-  print('Reverse: ${lista2.reversed()}');
+  lista3.sort();
+  print('Sort: ${lista3}');
+  print('Reverse: ${lista2.reversed.toList()}');
+
+  lista3.forEach((nombre) {
+    nombre = nombre.toUpperCase();
+    print(nombre);
+   });
+
+   print('Listado $lista3');
+   final newList = lista3.map((nombre) => nombre.toUpperCase()).toList();
+   print('newList: $newList');
 }
