@@ -1,7 +1,6 @@
 // To parse this JSON data, do
 //
 //     final persona = personaFromJson(jsonString);
-
 import 'dart:convert';
 
 Persona personaFromJson(String str) => Persona.fromJson(json.decode(str));
@@ -9,6 +8,12 @@ Persona personaFromJson(String str) => Persona.fromJson(json.decode(str));
 String personaToJson(Persona data) => json.encode(data.toJson());
 
 class Persona {
+    int id;
+    String email;
+    String firstName;
+    String lastName;
+    String avatar;
+
     Persona({
         this.id,
         this.email,
@@ -17,13 +22,7 @@ class Persona {
         this.avatar,
     });
 
-    int id;
-    String email;
-    String firstName;
-    String lastName;
-    String avatar;
-
-    factory Persona.fromJson(Map<String, dynamic> json) => Persona(
+    factory Persona.fromJson(Map<String, dynamic> json) => new Persona(
         id: json["id"],
         email: json["email"],
         firstName: json["first_name"],

@@ -11,58 +11,34 @@ ReqResRespuesta reqResRespuestaFromJson(String str) => ReqResRespuesta.fromJson(
 String reqResRespuestaToJson(ReqResRespuesta data) => json.encode(data.toJson());
 
 class ReqResRespuesta {
+    
+    int page;
+    int perPage;
+    int total;
+    int totalPages;
+    List<Persona> data;
+
     ReqResRespuesta({
         this.page,
         this.perPage,
         this.total,
         this.totalPages,
         this.data,
-        this.support,
     });
 
-    int page;
-    int perPage;
-    int total;
-    int totalPages;
-    List<Persona> data;
-    Support support;
-
-    factory ReqResRespuesta.fromJson(Map<String, dynamic> json) => ReqResRespuesta(
-        page: json["page"],
-        perPage: json["per_page"],
-        total: json["total"],
-        totalPages: json["total_pages"],
-        data: List<Persona>.from(json["data"].map((x) => Persona.fromJson(x))),
-        support: Support.fromJson(json["support"]),
+    factory ReqResRespuesta.fromJson(Map<String, dynamic> json) => new ReqResRespuesta(
+        page       : json["page"],
+        perPage    : json["per_page"],
+        total      : json["total"],
+        totalPages : json["total_pages"],
+        data       : new List<Persona>.from(json["data"].map((x) => Persona.fromJson(x))),
     );
 
     Map<String, dynamic> toJson() => {
-        "page": page,
-        "per_page": perPage,
-        "total": total,
+        "page"       : page,
+        "per_page"   : perPage,
+        "total"      : total,
         "total_pages": totalPages,
-        "data": List<dynamic>.from(data.map((x) => x.toJson())),
-        "support": support.toJson(),
-    };
-}
-
-
-class Support {
-    Support({
-        this.url,
-        this.text,
-    });
-
-    String url;
-    String text;
-
-    factory Support.fromJson(Map<String, dynamic> json) => Support(
-        url: json["url"],
-        text: json["text"],
-    );
-
-    Map<String, dynamic> toJson() => {
-        "url": url,
-        "text": text,
+        "data"       : new List<dynamic>.from(data.map((x) => x.toJson())),
     };
 }
