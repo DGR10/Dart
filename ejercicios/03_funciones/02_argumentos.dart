@@ -11,7 +11,7 @@ void saludar( String mensaje, [ String nombre = '<insertar nombre>' ]  ) {
 }
 
 // Argumentos con nombre {argumentos,}
-void saludar2({ String nombre, String mensaje, int veces }) {
+void saludar2({ String? nombre, String? mensaje, required int veces }) {
 
   for (var i = 0; i < veces; i++) {
     print('$mensaje $nombre');

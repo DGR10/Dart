@@ -24,7 +24,7 @@ class Logger2 {
 
 abstract class Astro with Logger {//, Logger2 {
 
-  String nombre;
+  String nombre = '';
 
   Astro() {
     imprimir('-- Init del Astro --');

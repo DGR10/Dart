@@ -6,7 +6,7 @@ main() {
   // stdout.write('Hola Mundo'); -> Sin salto de linea
   
   // Leer información
-  String nombre = stdin.readLineSync(); // '10'
+  String? nombre = stdin.readLineSync(); // '10'
   stdout.writeln('Tu nombre es: $nombre');
   // print('Tu nombre es: ' + nombre);
 }

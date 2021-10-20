@@ -3,7 +3,7 @@ import 'dart:io';
 
 main() {
 
-  String continuar = 'y';
+  String? continuar = 'y';
   int contador = 0;
 
    do { // La diferencia entre while y do while es que do while al menos se ejecuta una vez

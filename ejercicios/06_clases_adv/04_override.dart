@@ -11,7 +11,7 @@ class Persona {
 
 class Cliente extends Persona {
 
-  String direccion;
+  String direccion = '';
   List ordenes = [];
 
   Cliente (int edadActual, String nombreActual) : 

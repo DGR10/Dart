@@ -18,7 +18,11 @@ main() {
   */
 
   stdout.writeln('¿Que tabla de multiplicar necesitas saber?');
-  int numero = int.parse(stdin.readLineSync());
+  String? input = stdin.readLineSync();
+  int numero = 0;
+  if (input != null) {
+    numero = int.parse(input);
+  }
   
   for (int i = 1; i <= 10; i++) {
     stdout.writeln('$numero * $i = ${numero * i}');

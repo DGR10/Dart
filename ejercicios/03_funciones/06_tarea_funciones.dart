@@ -22,7 +22,7 @@ main() {
 
 void imprimir( String texto ) => stdout.writeln(texto);
 
-String leer() => stdin.readLineSync();
+String? leer() => stdin.readLineSync();
 
 
 void procesarUsuario( double salario, int i ) {
@@ -30,13 +30,13 @@ void procesarUsuario( double salario, int i ) {
   imprimir('=========== Usuario $i =============');
 
   imprimir('¿Cúal es su nombre?');
-  String nombre = stdin.readLineSync();
+  String? nombre = stdin.readLineSync();
 
   imprimir('¿Qué edad tienes?');
-  String edad = stdin.readLineSync();
+  String? edad = stdin.readLineSync();
   
   imprimir('¿En qué país naciste?');
-  String pais = stdin.readLineSync();
+  String? pais = stdin.readLineSync();
   
 
   final Map<String, dynamic> usuario = {

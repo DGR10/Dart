@@ -1,8 +1,8 @@
 class Persona {
 
   // Campos o propiedades -> Por defecto todas las propiedades son públicas, para hacerlas privadas ponemos _
-  String nombre;
-  int edad;
+  String nombre = '';
+  int edad = -1;
   String _bio = 'Nació en 1994';
 
   // Get y sets

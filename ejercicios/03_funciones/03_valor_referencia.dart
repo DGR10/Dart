@@ -31,6 +31,6 @@ Map<String, String> capitalizarMapa( Map<String, String> persona ) {
 
   persona = { ... persona };
 
-  persona['nombre'] = persona['nombre'].toUpperCase();
+  persona['nombre'] = (persona['nombre'])!.toUpperCase();
   return persona;
 }

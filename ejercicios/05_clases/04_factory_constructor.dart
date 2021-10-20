@@ -1,10 +1,10 @@
 
 class Rectangulo {
 
-  int base;
-  int altura;
-  int area;
-  String tipo; // cuadraro base = altura, rectangulo base != altura
+  int base = -1;
+  int altura = -1;
+  int area = -1;
+  String tipo = ''; // cuadraro base = altura, rectangulo base != altura
 
   // Los factory no crean instancias de la clase, solo pueden devolver uno ya creado
   factory Rectangulo(int base, int altura) {

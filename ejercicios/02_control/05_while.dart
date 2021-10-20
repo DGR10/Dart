@@ -3,7 +3,7 @@ import 'dart:io';
 
 main() {
 
-  String continuar = 'y';
+  String? continuar = 'y';
   int contador = 0;
 
   while( continuar == 'y') {

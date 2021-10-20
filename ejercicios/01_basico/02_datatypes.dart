@@ -38,7 +38,7 @@ main() {
 
   // =================== Listas - Arreglos
   // List<String> personajes = ['Superman', 'Batman'];
-  List<String> personajes = new List();
+  List<String> personajes = [];
   // personajes.add('Superman');
   // personajes.add('Batman');
   // personajes.addAll(['Superman', 'Batman', 'Robin']);
@@ -49,7 +49,7 @@ main() {
 
   // print(personajes);
 
-  List<String> villanos = new List(3);
+  List<String> villanos = [];
   // villanos.addAll(['Lex', 'Red Skull', 'Doom']); -> Esta opción no funciona
   villanos[0] = 'Lex';
   villanos[1] = 'Red Skull';
